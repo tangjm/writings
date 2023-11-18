@@ -1,9 +1,5 @@
-:root {
-  box-sizing: border-box;
-  font-family: Consolas;
-  --default-font-size: 16px;
-  --title-font-size: 20px;
-}
+@import url("./index.css");
+
 .writing-container {
   display: grid;
   padding: 0rem 5rem;
@@ -12,26 +8,41 @@
   display: flex;
   align-items: center;
 }
-.writing-header-container > :first-child {
+.writing-header-container > .writing-title:first-child {
   flex: 1;
   font-size: var(--title-font-size);
+  font-family: var(--default-font);
   font-weight: 600;
   padding: 1rem;
 }
 .writing-header-container > span {
   margin: 0rem 1rem;
 }
-  
 .writing-text {
   overflow-y: scroll;
+  resize: none;
   text-align: left;
   font-size: var(--default-font-size);
+  font-family: var(--default-font);
   height: 400px;
   padding: 1rem;
 }
-
-button {
-  margin: 1rem 0rem;
-  padding: 1rem;
-  font-size: 16px;
+button#close {
+  border: var(--button-border-style);
+  background-color: var(--button-background-colour);
+  color: #000;
+  border-radius: 2px;
+}
+button#close:hover, button#save:focus {
+  background-color: rgb(214, 75, 103);
+  color: #fff;
+}
+button#save {
+  border: var(--button-border-style);
+  background-color: var(--button-background-colour);
+  color: #000;
+  border-radius: 2px;
+}
+button#save:hover, button#save:focus {
+  background-color: rgb(180, 255, 206);
 }

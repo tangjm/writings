@@ -1,30 +1,55 @@
 :root {
-  --hover-colour: rgb(189, 171, 171);
+  box-sizing: border-box;
+  --hover-colour:rgb(196, 214, 237);
+  --default-font-size: 16px; 
+  --title-font-size: 20px;
+  --default-font: Consolas, monospace;
+  --button-background-colour: #e9e9ed;
+  --button-border-style: 1px solid #8f8f9d;
+  font-size: var(--default-font-size);
+  font-family: var(--default-font);
 }
 
 button {
   margin: 1rem 0rem;
   padding: 1rem;
-  font-size: 16px;
+  font-size: var(--default-font-size);
+  font-family: var(--default-font);
+  background: var(--button-background-colour);
 }
 
-.writings-list-container {
+button#add-writing {
+  border: 1px solid #8f8f9d;
+  border-radius: 2px;
+}
+button#add-writing:hover {
+  background-color: rgb(145, 159, 184);
+  color: #fff
+}
+
+.main-container {
+  padding: 0rem 5rem;
+}
+.navbar-container {
   display: flex;
   align-items: center;
   padding: 1rem;
   margin: 1rem;
-  gap: 10px;
+  gap: 1rem;
 }
-.writings-list-container > :first-child {
+.navbar-container > :first-child {
   flex: 1;
 }
 
 ul.writings-list {
   list-style-type: none;
   line-height: 2;
+  padding: 1rem;
+  margin: 1rem;
 }
 
 ul.writings-list > li :hover {
-  background: var(--hover-colour);
   cursor: pointer;
+  color: rgb(145, 159, 184);
+  font-weight: 600;
 }
