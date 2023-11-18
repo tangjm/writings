@@ -14,7 +14,7 @@ function updateWritingsCount() {
 }
 
 addBtn.addEventListener("click", e => {
-  window.location.href = "/dist/writing.html";
+  window.location.href = "writing.html";
 })
 
 writingsListEl.addEventListener("click", (e) => {
@@ -22,7 +22,7 @@ writingsListEl.addEventListener("click", (e) => {
     const writingId = e.target.getAttribute("data-writing-id");
     const data = { "data-writing-id": writingId };
     const queryString = new URLSearchParams(data).toString();
-    window.location.href = "/dist/writing.html" + "?" + queryString;
+    window.location.href = "writing.html" + "?" + queryString;
   }
 });
 

@@ -24,7 +24,7 @@ closeBtn.addEventListener("click", e => {
     let confirmed = confirm("You have unsaved changes. Are you sure you want to continue?")
     if (!confirmed) return; 
   }
-  window.location.href = "/dist/index.html"
+  window.location.href = "index.html"
 });
 
 saveBtn.addEventListener("click", e => {
