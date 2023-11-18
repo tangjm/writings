@@ -57,5 +57,9 @@ window.addEventListener("load", e => {
   }
 })
 
-
+window.addEventListener("beforeunload", e => {
+  if (savedStatusEl.textContent === "unsaved*") {
+    e.preventDefault();
+  }
+})
 
