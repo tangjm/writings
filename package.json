@@ -1,7 +1,7 @@
 {
-  "name": "notes-app",
+  "name": "writings",
   "version": "1.0.0",
-  "description": "",
+  "description": "An offline application for taking notes",
   "main": "index.js",
   "scripts": {
     "test": "jest",
@@ -10,7 +10,7 @@
     "start-dev": "webpack serve --open --config webpack.dev.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "tangjm",
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-env": "^7.23.3",
