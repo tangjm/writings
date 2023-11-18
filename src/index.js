@@ -1,4 +1,4 @@
-import "./index.css";
+import "./index.css"
 import { loadAllWritings } from "./localStorage.js"
 import { removeAllChildren } from "./dom.js";
 

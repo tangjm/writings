@@ -1,4 +1,4 @@
-import "./writing.css"; 
+import "./writing.css"
 import WritingFactory from "./models/WritingFactory.js";
 import { loadWriting, saveWriting } from "./localStorage.js"
 

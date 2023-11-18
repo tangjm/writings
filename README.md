@@ -1,6 +1,6 @@
 # Notes app 
 
-Offline application for taking notes. 
+An offline application for taking notes. 
 
 ### Features 
 
@@ -8,14 +8,23 @@ Offline application for taking notes.
 - [x] A page for editing and saving notes
 - [x] Store notes in localStorage 
 
-### Development 
+### Setup 
+
+Development 
 
 ```bash 
+# Install dependencies
 npm i 
 
 # Start webpack server
 npm start
 
+# Open dist/index.html 
+```
+
+Build 
+
+```bash
 # Create production build 
 npm run build 
 ```

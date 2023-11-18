@@ -5,6 +5,9 @@ module.exports = merge(common, {
   mode: "development",
   devtool: "inline-source-map",
   devServer: {
-    static: "./dist"
-  }
-})
+    static: "./dist",
+  },
+  optimization: {
+    runtimeChunk: "single",
+  },
+});
