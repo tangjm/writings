@@ -1,6 +1,8 @@
 import "./writing.css"
 import WritingFactory from "./models/WritingFactory.js";
+import { debounce } from "./helpers.js";
 import { loadWriting, saveWriting } from "./localStorage.js"
+
 
 const containerEl = document.querySelector(".writing-container")
 const saveBtn = document.querySelector("button#save")
@@ -11,19 +13,6 @@ const titleEl = document.querySelector(".writing-title")
 const textAreaEl = document.querySelector(".writing-text")
 
 
-// debounced input
-// Debouncing slows down fast moving event streams by imposing a minimum bound on the time that must elapse between any two events.
-// gap specifies the minimum unit of time in milliseconds that must elapse between any two events
-function debounce(cb, gap) {
-  let timeout;
-  return function setup(e) {
-    clearTimeout(timeout); 
-    timeout = setTimeout(() => {
-      cb(e);
-    }, gap)
-  }
-}
-
 containerEl.addEventListener("input", debounce(e => {
   if (e.target.classList.contains("writing-title") || e.target.classList.contains("writing-text")) {
     savedStatusEl.textContent = "unsaved*";
@@ -31,12 +20,20 @@ containerEl.addEventListener("input", debounce(e => {
 }, 300))
 
 closeBtn.addEventListener("click", e => {
-  console.log(window.location)
+  if (savedStatusEl.textContent === "unsaved*") {
+    let confirmed = confirm("You have unsaved changes. Are you sure you want to continue?")
+    if (!confirmed) return; 
+  }
   window.location.href = "/dist/index.html"
 });
 
 saveBtn.addEventListener("click", e => {
   const writingId = parseInt(writingIdEl.getAttribute("data-writing-id"))
+
+  if (titleEl.value === "") {
+    alert("Title cannot be empty"); 
+    return;
+  }
 
   const writing = WritingFactory.createWriting(); 
   writing
@@ -46,8 +43,6 @@ saveBtn.addEventListener("click", e => {
 
   saveWriting(window.localStorage, writing);
   savedStatusEl.textContent = "saved";
-
-  console.log("Saved writing id: ", writingId)
 })
 
 window.addEventListener("load", e => {
