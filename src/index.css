@@ -1,0 +1,30 @@
+:root {
+  --hover-colour: rgb(189, 171, 171);
+}
+
+button {
+  margin: 1rem 0rem;
+  padding: 1rem;
+  font-size: 16px;
+}
+
+.writings-list-container {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+  gap: 10px;
+}
+.writings-list-container > :first-child {
+  flex: 1;
+}
+
+ul.writings-list {
+  list-style-type: none;
+  line-height: 2;
+}
+
+ul.writings-list > li :hover {
+  background: var(--hover-colour);
+  cursor: pointer;
+}
