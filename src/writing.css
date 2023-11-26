@@ -33,7 +33,8 @@ button#close {
   color: #000;
   border-radius: 2px;
 }
-button#close:hover, button#save:focus {
+button#close:hover,
+button#save:focus {
   background-color: rgb(214, 75, 103);
   color: #fff;
 }
@@ -43,6 +44,7 @@ button#save {
   color: #000;
   border-radius: 2px;
 }
-button#save:hover, button#save:focus {
+button#save:hover,
+button#save:focus {
   background-color: rgb(180, 255, 206);
 }

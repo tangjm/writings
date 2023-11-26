@@ -1,7 +1,7 @@
 :root {
   box-sizing: border-box;
-  --hover-colour:rgb(196, 214, 237);
-  --default-font-size: 16px; 
+  --hover-colour: rgb(196, 214, 237);
+  --default-font-size: 16px;
   --title-font-size: 20px;
   --default-font: Consolas, monospace;
   --button-background-colour: #e9e9ed;
@@ -24,7 +24,7 @@ button#add-writing {
 }
 button#add-writing:hover {
   background-color: rgb(145, 159, 184);
-  color: #fff
+  color: #fff;
 }
 
 .main-container {

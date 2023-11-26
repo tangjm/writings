@@ -11,8 +11,8 @@ function Writing(id, title, content) {
     setContent(newContent) {
       this.content = newContent;
       return this;
-    }
-  }
+    },
+  };
 }
 
 export default class WritingFactory {
